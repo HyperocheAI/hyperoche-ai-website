@@ -1,0 +1,28 @@
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">✦ Our Services</div>
+      <h2>Everything your business needs,<br /><span class="gradient-text">powered by AI</span></h2>
+      <p class="section-desc">From intelligent automation to healthcare integrations — Hyperoche AI delivers cutting-edge solutions tailored to your industry.</p>
+    </div>
+
+    <div class="services-grid">
+      @for (svc of services; track svc.id) {
+        <a [routerLink]="['/services', svc.id]" class="service-card" [style.--card-color]="svc.color">
+          <div class="card-icon-wrap">{{svc.icon}}</div>
+          <h3 class="card-title">{{svc.title}}</h3>
+          <p class="card-desc">{{svc.shortDesc}}</p>
+          <div class="card-tags">
+            @for (tag of svc.techStack.slice(0,3); track tag) {
+              <span class="tag">{{tag}}</span>
+            }
+          </div>
+          <div class="card-arrow">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Explore Solutions
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+<div class="mockup-shell" [style.--svc-color]="service?.color">
+  <div class="shell-topbar">
+    <div class="shell-dots"><span></span><span></span><span></span></div>
+    <div class="shell-addr">hyperoche.ai / {{service?.id}}</div>
+    <div class="shell-actions"><span></span><span></span></div>
+  </div>
+  <div class="shell-sidebar">
+    <div class="side-logo">
+      <img src="logo.svg" alt="H" />
+    </div>
+    @for (item of [1,2,3,4,5]; track item) {
+      <div class="side-item" [class.active]="item === 1">
+        <div class="side-dot"></div>
+      </div>
+    }
+  </div>
+  <div class="shell-main">
+    <div class="shell-header">
+      <div class="shell-title">{{service?.title}} Dashboard</div>
+      <div class="shell-badge">
+        <span class="live-dot"></span> AI Active
+      </div>
+    </div>
+    <div class="shell-kpis">
+      @for (kpi of kpis; track kpi.label) {
+        <div class="kpi-card">
+          <div class="kpi-val" [style.color]="kpi.color">{{kpi.val}}</div>
+          <div class="kpi-label">{{kpi.label}}</div>
+          <div class="kpi-trend" [style.color]="kpi.color">{{kpi.trend}}</div>
+        </div>
+      }
+    </div>
+    <div class="shell-chart">
+      <div class="chart-label">AI Performance</div>
+      <div class="chart-area">
+        @for (h of bars; track $index) {
+          <div class="chart-col" [style.height.%]="h" [style.background]="service?.gradient"></div>
+        }
+      </div>
+    </div>
+    <div class="shell-feed">
+      @for (item of feedItems; track item) {
+        <div class="feed-item">
+          <div class="feed-dot" [style.background]="service?.color"></div>
+          <div class="feed-text">{{item}}</div>
+        </div>
+      }
+    </div>
+    <div class="shell-watermark">
+      <img src="logo.svg" alt="Hyperoche" />
+      Powered by Hyperoche AI
+    </div>
+  </div>
+</div>

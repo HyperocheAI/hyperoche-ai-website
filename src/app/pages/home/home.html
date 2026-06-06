@@ -1,0 +1,60 @@
+<app-hero />
+<app-services />
+
+<!-- Why Hyperoche AI -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-text">
+        <div class="section-tag">✦ Why Hyperoche AI</div>
+        <h2>Enterprise AI,<br />delivered at startup speed</h2>
+        <p>We combine deep AI expertise with rapid delivery to help businesses of all sizes compete with the best — without the enterprise price tag.</p>
+        <div class="why-points">
+          @for (p of points; track p.title) {
+            <div class="why-point">
+              <div class="point-icon-wrap">{{p.icon}}</div>
+              <div>
+                <div class="point-title">{{p.title}}</div>
+                <div class="point-desc">{{p.desc}}</div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+      <div class="why-visual">
+        <div class="process-card">
+          <div class="process-title">How we work</div>
+          @for (step of steps; track step.num; let last = $last) {
+            <div class="process-step">
+              <div class="step-num" [style.background]="step.color">{{step.num}}</div>
+              <div class="step-info">
+                <div class="step-title">{{step.title}}</div>
+                <div class="step-desc">{{step.desc}}</div>
+              </div>
+            </div>
+            @if (!last) { <div class="step-connector"></div> }
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack -->
+<section class="tech-section">
+  <div class="container">
+    <div class="tech-section-head">
+      <div class="section-tag" style="display:table;margin:0 auto 12px">✦ Our Technology</div>
+      <h2>Built on cutting-edge AI stack</h2>
+      <p>Every solution we build leverages the latest AI models, cloud infrastructure and enterprise-grade security.</p>
+    </div>
+    <div class="tech-grid">
+      @for (t of techs; track t.name) {
+        <div class="tech-item">
+          <span class="tech-emoji">{{t.icon}}</span>
+          <span class="tech-name">{{t.name}}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

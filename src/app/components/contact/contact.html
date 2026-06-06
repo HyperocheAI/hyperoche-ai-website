@@ -1,0 +1,11 @@
+<form class="contact-form" (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-row">
+    <input name="name" [(ngModel)]="form.name" required placeholder="Your Name" class="form-input" />
+    <input name="email" [(ngModel)]="form.email" required type="email" placeholder="Email Address" class="form-input" />
+  </div>
+  <input name="subject" [(ngModel)]="form.subject" placeholder="Subject" class="form-input" />
+  <textarea name="message" [(ngModel)]="form.message" required placeholder="Tell us about your project..." class="form-input form-textarea" rows="4"></textarea>
+  <button type="submit" class="btn-primary" [disabled]="f.invalid" style="width:100%;justify-content:center">
+    @if (sent) { ✓ Message Sent! } @else { Send Message }
+  </button>
+</form>

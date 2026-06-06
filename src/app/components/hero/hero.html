@@ -1,0 +1,100 @@
+<section class="hero">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        AI-Powered Enterprise Solutions
+      </div>
+
+      <h1 class="hero-title">
+        Build the Future<br />with
+        <span class="gradient-text"> Hyperoche AI</span>
+      </h1>
+
+      <p class="hero-desc">
+        We design and deliver intelligent software solutions — from AI call centers and custom workflows to HL7 healthcare integrations, mobile apps, and beyond.
+      </p>
+
+      <div class="hero-actions">
+        <a routerLink="/services/campaign-management" class="btn-brand">
+          Explore Solutions
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#services" class="btn-outline">View All Services</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">11+</span>
+          <span class="stat-label">AI Services</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Integrations</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">24/7</span>
+          <span class="stat-label">AI Support</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="main-card">
+        <div class="card-header">
+          <img src="logo.svg" alt="Hyperoche" class="card-logo" />
+          <div>
+            <div class="card-title">Hyperoche AI Platform</div>
+            <div class="card-sub">Live Intelligence Dashboard</div>
+          </div>
+          <div class="status-dot"></div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric">
+            <div class="metric-val" style="color:#4361ee">98.7%</div>
+            <div class="metric-key">Accuracy</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val" style="color:#059669">4.2ms</div>
+            <div class="metric-key">Response</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val" style="color:#d97706">2.4M</div>
+            <div class="metric-key">API Calls/day</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val" style="color:#7c3aed">99.9%</div>
+            <div class="metric-key">Uptime</div>
+          </div>
+        </div>
+
+        <div class="chart-bars">
+          @for (h of barHeights; track $index) {
+            <div class="bar" [style.height.%]="h" [style.opacity]="0.4 + h/200"></div>
+          }
+        </div>
+      </div>
+
+      <div class="floating-chip chip-1">
+        <span>🤖</span> AI Processing
+        <span class="chip-val">Active</span>
+      </div>
+      <div class="floating-chip chip-2">
+        <span>⚡</span> 60% Faster Delivery
+      </div>
+      <div class="floating-chip chip-3">
+        <span>🔒</span> Enterprise Grade
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+  </div>
+</section>

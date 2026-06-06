@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="g1" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#5b90f5"/>
+      <stop offset="45%" stop-color="#6c6ef7"/>
+      <stop offset="100%" stop-color="#8b3ff5"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#64a0f6"/>
+      <stop offset="100%" stop-color="#a060f5"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="50%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5080f5"/>
+      <stop offset="100%" stop-color="#7838e8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark navy background with rounded corners -->
+  <rect width="200" height="200" rx="30" fill="#0c1020"/>
+
+  <!-- Left column top -->
+  <polygon points="46,32 68,32 68,96 46,96" fill="url(#g1)"/>
+  <!-- Left column bottom -->
+  <polygon points="46,112 68,112 68,170 46,170" fill="url(#g2)" opacity="0.88"/>
+
+  <!-- Right column top -->
+  <polygon points="132,32 154,32 154,96 132,96" fill="url(#g3)"/>
+  <!-- Right column bottom -->
+  <polygon points="132,112 154,112 154,170 132,170" fill="url(#g3)" opacity="0.88"/>
+
+  <!-- Diagonal crossbar — angled from top-right to bottom-left -->
+  <!-- Upper crossing arm: connects right column top to left column bottom area -->
+  <polygon points="68,70 132,48 132,96 68,96" fill="url(#g1)" opacity="0.85"/>
+  <!-- Lower crossing arm -->
+  <polygon points="68,112 132,96 132,140 68,118" fill="url(#g2)" opacity="0.72"/>
+
+  <!-- Top-left notch / cap on left column -->
+  <polygon points="46,32 68,32 56,56 46,56" fill="#74aaf8" opacity="0.9"/>
+  <!-- Top-right notch on right column -->
+  <polygon points="132,32 154,32 154,54 142,54" fill="#74aaf8" opacity="0.85"/>
+
+  <!-- Play arrow — small triangle to the right -->
+  <polygon points="162,86 178,100 162,114" fill="#5c90f6" opacity="0.95"/>
+</svg>
